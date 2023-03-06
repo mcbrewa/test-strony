@@ -1,0 +1,307 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Montserrat';
+}
+
+
+.container{
+    display: grid;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 20px 20px;
+
+}
+
+
+header{
+    
+    
+    text-align: center;
+    /* position: fixed; */
+    width: 100%;
+    /* display: none; */
+
+}
+/* hamburger navigation */
+nav{
+    position: absolute;
+    text-align: left;
+    /* background: lightblue; */
+    width: 100%;
+    display: none;
+}
+
+nav ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+nav li{
+    margin-bottom: 1em;
+    margin-left: 1em;
+}
+
+nav a {
+    color: black;
+    text-decoration: none;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+}
+
+
+
+
+.welcome-photo, .welcome-text{
+    /* padding-top: 10em; */
+}
+
+
+
+
+
+.welcome, .projects{
+    
+    display: grid;
+    grid-template-columns:repeat(auto-fit, minmax(240px,1fr)) ;
+    justify-content: center;
+    align-items: center;
+    gap: 20px
+    
+}
+
+.projects img{
+    border-radius: 20px;
+    
+}
+
+.projects h1{
+    text-align: center;
+    margin-top: 0.5em;
+    margin-bottom: 0.5me;
+}
+/* tutaj jest jakis bulshit */
+.logo img{
+    max-width: 200px;
+    min-height: 200px;
+    margin: 0 auto;
+}
+
+.footer-logo img{
+    max-width: 200px;
+    min-height: 200px;
+    margin: 0 auto;
+    
+}
+
+ 
+    img {
+        max-width: 100%;
+        max-height: 100%;
+    }
+   
+
+
+   section{
+    min-height: 100vh;
+    background-color: #fff;
+}
+
+.welcome-photo{
+    margin-top: 150px;
+}
+
+.welcome-text{
+    margin-bottom: 150px;
+}
+/* TECHNOLOGIE */
+
+
+.skills{
+    /* margin-top: 5em; */
+    display: grid;
+    grid-template-columns:repeat(auto-fit, minmax(240px,1fr)) ;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 20px 20px;
+}
+
+.skill {
+    margin: 0 auto;
+    border-radius: 20%;
+    border: #000 solid 4px;
+    padding: 20px;
+
+}
+
+.skill img{
+    padding: 4  em;
+}
+
+
+
+/* FOOTER */
+
+footer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.social-links{
+    margin-right: 50px;
+}
+
+.social-links .fab{
+    
+    margin-top: 40px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 30px;
+    font-size: 40px;
+    color: #000;
+    background: #fff;
+    margin-right:15px;
+
+}
+
+.social-links .fab:hover{
+    color: #D30D1F;
+}
+
+nav ul li a:hover{
+    color: #D30D1F;
+}
+
+/* navigation mobile */
+.nav-toggle:checked ~ nav{
+    display: block;
+}
+
+
+.nav-toggle {
+    position: absolute !important;
+    top: -9999px !important;
+    left: -9999px !important;
+  }
+  
+  .nav-toggle:focus ~ .nav-toggle-label {
+    outline: 3px solid rgba(red, .75);
+  }
+  
+  .nav-toggle-label {
+    position: relative;
+    top: -200px;
+    left: 0;
+    margin-left: 1em;
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+  
+  .nav-toggle-label span,
+  .nav-toggle-label span::before,
+  .nav-toggle-label span::after {
+    display: block;
+    background: black;
+    height: 2px;
+    width: 2em;
+    border-radius: 2px;
+    position: relative;
+  }
+  
+  .nav-toggle-label span::before,
+  .nav-toggle-label span::after {
+    content: '';
+    position: absolute;
+  }
+  
+  .nav-toggle-label span::before {
+    bottom: 7px;
+  }
+  
+  .nav-toggle-label span::after {
+    top: 7px;
+  }
+/* MEDIA */
+
+
+  
+
+@media screen and (min-width: 800px) {
+    .nav-toggle-label {
+      display: none;
+    }
+
+    .welcome .welcome-photo img, .welcome-text{
+        position: relative;
+        top: -100px;
+    }
+
+    header {
+        display: grid;
+       
+      }
+      nav {
+  
+        position: relative;
+        text-align: left;
+        transition: none;
+        transform: scale(1,1);
+        background: none;
+        /* top: initial;
+        left: initial; */
+       
+        
+        grid-column: 4 / 4;
+        display: flex;
+        
+        align-items: center;
+        justify-content: center;
+
+      }
+      
+      nav ul {
+        display: flex;
+        justify-content: flex-end;
+        margin-top: 2em;
+        padding-right: 2em;
+      }
+      
+      nav li {
+        margin-left: 3em;
+        margin-bottom: 0;
+      }
+      
+      nav a {
+        opacity: 1;
+        position: relative;
+      }
+
+      .welcome-photo, .welcome-text{
+        padding: 50px 50px;
+        
+        
+    }
+    h1{
+        color: green;
+    }
+
+    .welcome-photo{
+        margin-top: 0;
+    }
+
+    .welcome-text{
+        margin-bottom: 0;
+    }
+}
+
+
+h1{
+    color: green;
+}
